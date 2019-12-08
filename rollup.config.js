@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import autoPreprocess from 'svelte-preprocess';
 import alias from 'rollup-plugin-alias';
+import svg from 'rollup-plugin-svg'
 import path from 'path'
 
 const production = !process.env.ROLLUP_WATCH;
@@ -19,6 +20,7 @@ export default {
         file: 'public/bundle.js'
     },
     plugins: [
+        svg(),
         alias({
             resolve: ['.js', '.svelte', '/index.js'],
             entries: [

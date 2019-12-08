@@ -1,0 +1,1 @@
+<div class="px-20 py-10"><slot><!-- optional fallback --></slot></div>
