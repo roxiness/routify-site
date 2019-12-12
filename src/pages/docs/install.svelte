@@ -12,8 +12,6 @@
   .step {
     @apply my-16;
   }
-
-  
 </style>
 
 <!-- <a href="{$url('./introductions')}">introductions</a> -->
@@ -67,7 +65,7 @@
 </div>
 
 <div class="step">
-    <h4>3. Add router to your app</h4>
+  <h4>3. Add router to your app</h4>
   <div class="border border-gray-400 shadow-xl mt-2 p-4">
     <Prism language="html">
       {`<!-- src/App.svelte -->
@@ -79,5 +77,39 @@
 <Router {routes} />
 `}
     </Prism>
+  </div>
+</div>
+
+<div class="step">
+  <h4>4. Enable SPA (optional)</h4>
+  <p>
+    If you're using history based navigation, make sure that your
+    server redirects all requests to "/".
+  </p>
+  <div class="border border-gray-400 shadow-xl mt-2 p-4">
+    <Tabs>
+      <div class="tablinks border-b-2 border-gray-400 mb-2 text-gray-700">
+        <TabsLink class="px-2 font-semibold">Sirv</TabsLink>
+        <TabsLink class="px-2 font-semibold">Other</TabsLink>
+
+      </div>
+      <div class="tabpages">
+        <TabsPage>
+          <p>For Sirv, enable the single option.</p>
+          <Prism language="javascript">
+            {`/** package.json **/
+...
+"scripts": {
+  "start:sirv": "sirv public --single --dev"  
+  ...
+}  
+`}
+          </Prism>
+        </TabsPage>
+        <TabsPage>
+          <p>For other servers, consult the documentation on how to redirect all requests. This is also known as URL-rewrites.</p>
+        </TabsPage>
+      </div>
+    </Tabs>
   </div>
 </div>

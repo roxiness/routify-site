@@ -11,19 +11,34 @@
 
   const links = [
     { path: "/docs/introduction", name: "Introduction", icon: TextIcon },
-    { path: "/docs/install", name: "Install", icon: FolderIcon },
+    {
+      path: "#",
+      name: "Getting Started",
+      icon: RulerIcon,
+      children: [
+        { path: "/docs/install", name: "Install", icon: FolderIcon },
+        { path: "/docs/config", name: "Config", icon: FolderIcon },
+        
+        ]
+    },
     {
       path: "#",
       name: "Guide",
       icon: RulerIcon,
       children: [
-        { path: "/docs/gettingstarted", name: "Getting Started", icon: RulerIcon },
+        { path: "/docs/scheme", name: "Scheme", icon: RulerIcon },
         { path: "/docs/props", name: "Props", icon: RulerIcon },
         { path: "/docs/helpers", name: "Helpers", icon: RulerIcon },
-        { path: "/docs/authentication", name: "Authentication", icon: RulerIcon }
+
       ]
     },
-    { path: "/docs/examples", name: "Examples", icon: FolderIcon },
+    { path: "/docs/examples", name: "Examples", icon: FolderIcon, children: [
+        {
+          path: "/docs/authentication",
+          name: "Authentication",
+          icon: RulerIcon
+        }
+    ] }
   ];
 
   function selected(link, $route) {
