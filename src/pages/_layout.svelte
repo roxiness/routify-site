@@ -3,24 +3,30 @@
   import { getContext } from "svelte";
   import NavLinks from "../components/NavLinks.svelte";
   const routify = getContext("routify");
-  console.log("routify", routify);
   const { url } = routify;
-  // import { getContext } from "@sveltech/routify";
-  // const url2 = url()
-  // console.log('url2', $url2)
-  // console.log('url', $url('./introduction'))
 </script>
 
-<SideNav
-  class="shadow bg-gray-700 text-white overflow-y-auto overflow-x-hidden">
-  <aside slot="aside">
-    <a href="/" class="m-4 block">
-    <img src="/routify4.png" alt="">
-      <!-- <h6>Sveltech</h6>
-      <h3>Routify</h3> -->
-    </a>
-    <NavLinks />
-  </aside>
-  <div class="" />
-  <slot />
-</SideNav>
+<style>
+  :global(.show .activator.desktop) {
+    @apply text-white;
+  }
+  :global(.show-mobile .activator.mobile) {
+    @apply text-white;
+  }
+</style>
+
+<div>
+  <SideNav
+    class="shadow bg-gray-700 text-white overflow-y-auto overflow-x-hidden">
+    <aside slot="aside">
+      <a href="/" class="m-4 mb-0 block">
+        <img src="/routify4.png" alt="" />
+        <br />
+      </a>
+      <small class="ml-4">v1.0.1-4@next</small>
+      <NavLinks />
+    </aside>
+    <div class="" />
+    <slot />
+  </SideNav>
+</div>

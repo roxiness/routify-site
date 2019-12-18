@@ -14,16 +14,15 @@
   }
 </style>
 
-<!-- <a href="{$url('./introductions')}">introductions</a> -->
 <h1>Install</h1>
+<p>Aternatively to installing Routify, you can also clone the Routify starter template.</p>
+<a class="code " href="https://github.com/sveltech/routify-starter">https://github.com/sveltech/routify-starter</a>  
 
 <div class="step">
-  <h4>1. Install NPM</h4>
+  <h4>1. Install module</h4>
   <div class="border border-gray-400 shadow-xl mt-2 p-4">
     <div class="pb-2">Run in project folder</div>
-    <span class="px-2 py-1 shadow-inner bg-gray-200 rounded">
-      npm i -d @sveltech/routify
-    </span>
+    <span class="code py-1">npm i -d @sveltech/routify</span>
   </div>
 </div>
 
@@ -41,9 +40,14 @@
           <Prism language="javascript">
             {`/** package.json **/
 ...
+ "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    ...
+},
 "scripts": {
-  "start:routify": "routify",
-  "dev": "run-p start:routify start:sirv autobuild",
+  "dev": "run-p watch:routify watch:rollup",
+  "watch:rollup": "rollup -c -w",
+  "watch:routify": "routify",
   ...
 }  
 `}
@@ -83,8 +87,8 @@
 <div class="step">
   <h4>4. Enable SPA (optional)</h4>
   <p>
-    If you're using history based navigation, make sure that your
-    server redirects all requests to "/".
+    If you're using history based navigation, make sure that your server
+    redirects all requests to "/".
   </p>
   <div class="border border-gray-400 shadow-xl mt-2 p-4">
     <Tabs>
@@ -100,14 +104,17 @@
             {`/** package.json **/
 ...
 "scripts": {
-  "start:sirv": "sirv public --single --dev"  
+  "start": "sirv public --single"
   ...
 }  
 `}
           </Prism>
         </TabsPage>
         <TabsPage>
-          <p>For other servers, consult the documentation on how to redirect all requests. This is also known as URL-rewrites.</p>
+          <p>
+            For other servers, consult the documentation on how to redirect all
+            requests. This is also known as URL-rewrites.
+          </p>
         </TabsPage>
       </div>
     </Tabs>

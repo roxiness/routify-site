@@ -3,6 +3,7 @@
   import { route } from "@sveltech/routify";
   import { getContext } from "svelte";
 
+  import PowerIcon from "@iconscout/unicons/svg/line/power.svg";
   import TextIcon from "@iconscout/unicons/svg/line/book-open.svg";
   import RulerIcon from "@iconscout/unicons/svg/line/ruler-combined.svg";
   import LayerIcon from "@iconscout/unicons/svg/line/layer-group.svg";
@@ -14,7 +15,7 @@
     {
       path: "#",
       name: "Getting Started",
-      icon: RulerIcon,
+      icon: PowerIcon,
       children: [
         { path: "/docs/install", name: "Install", icon: FolderIcon },
         { path: "/docs/config", name: "Config", icon: FolderIcon },
@@ -27,15 +28,16 @@
       icon: RulerIcon,
       children: [
         { path: "/docs/scheme", name: "Scheme", icon: RulerIcon },
+        { path: "/docs/parameters", name: "Parameters", icon: RulerIcon },
         { path: "/docs/props", name: "Props", icon: RulerIcon },
         { path: "/docs/helpers", name: "Helpers", icon: RulerIcon },
 
       ]
     },
-    { path: "/docs/examples", name: "Examples", icon: FolderIcon, children: [
+    { path: "#", name: "Examples", icon: FolderIcon, children: [
         {
           path: "/docs/authentication",
-          name: "Authentication",
+          name: "Auth & guards",
           icon: RulerIcon
         }
     ] }

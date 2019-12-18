@@ -40,7 +40,7 @@
     <li>
       <h5>SSOT and KISS</h5>
       If
-      <span class="rounded shadow-inner px-2 bg-gray-200">
+      <span class="code">
         /recipes/cupcakes
       </span>
       doesn't exist in your browser, it doesn't exist in your project. That's

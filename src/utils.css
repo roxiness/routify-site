@@ -101,5 +101,6 @@ input:hover, textarea:hover {
     .btn.outline.$(color).xxxl {@apply border-8}
 }
 
-
-
+.code {
+    @apply rounded shadow-inner px-2 bg-gray-200
+}

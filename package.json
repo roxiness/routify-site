@@ -33,6 +33,7 @@
     "dev": "run-p start:routify start:sirv autobuild",
     "start": "sirv public --single",
     "start:routify": "routify",
-    "start:sirv": "sirv public --single --dev"
+    "start:sirv": "sirv public --single --dev",
+    "help:routify": "routify --help"
   }
 }
