@@ -69,7 +69,7 @@ Access parameters from URL.
   import { params } from '@sveltech/routify'  
   export let postId, userId
 
-  console.log(params) /** {userId: 123, postId: 456} **/
+  console.log($params) /** {userId: 123, postId: 456} **/
   console.log(postId) /** 456 **/
   console.log(userId) /** undefined (parameter does not exist on [postId].svelte) **/
 </script>
@@ -91,7 +91,7 @@ See if a page is the current route
   ].map(([path, name]) => {
     return {
       name,
-      href: url(path),
+      href: $url(path),
       active: $isActive(path)
     }
   })
@@ -108,3 +108,45 @@ See if a page is the current route
     
 `}
 </Prism>
+
+<br />
+<h3>leftover</h3>
+Get the unconsumed part of the URL. Useful for fallbacks and navigating in widgets.
+  
+<p>
+<i>Example on http://localhost/showawidget/123/update</i>
+</p>
+<Prism language="svelte">
+  {`<!-- src/pages/showawidget/_fallback.svelte -->
+<scr`}{`ipt>
+  import CrudWidget from 'src/components/CrudWidget/Index.svelte'
+  import data from './mydata.js'  
+</script>
+
+<CrudWidget {data} />
+`}
+</Prism>
+
+<Prism language="svelte">
+  {`<!-- src/components/CrudWidget/Index.svelte -->
+<scr`}{`ipt>
+  import { leftover } from '@sveltech/routify'
+  export let data
+
+  /** import pages into components **/
+  import list from './_list.svelte'
+  import view from './_view.svelte'
+  import create from './_create.svelte'  
+  import update from './_update.svelte'  
+  const components = { view, create, update }
+
+  /** get id and action from $leftover. If there's no action, we'll use 'view' **/
+  $: [id, action = 'view'] = $leftover.split('/')
+  $: component = id ? components[action]) : list;
+</script>
+
+<svelte:component this={component} {data} {id} />
+`}
+</Prism>
+
+
