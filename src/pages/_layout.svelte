@@ -23,7 +23,7 @@
         <img src="/routify4.png" alt="" />
         <br />
       </a>
-      <small class="ml-4">v1.0.1-4@next</small>
+      <small class="ml-4">v1.0.1-x@next</small>
       <NavLinks />
     </aside>
     <div class="" />

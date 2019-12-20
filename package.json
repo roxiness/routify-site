@@ -27,8 +27,9 @@
     "sirv-cli": "^0.4.4",
     "svelte-prism": "^1.0.5"
   },
-  "scripts": {
-    "build": "rollup -c",
+  "scripts": {    
+    "buildnow": "npm run build && cd public && now --prod",
+    "build": "rollup -c",    
     "autobuild": "rollup -c -w",
     "dev": "run-p start:routify start:sirv autobuild",
     "start": "sirv public --single",
