@@ -30,3 +30,7 @@
     <slot />
   </SideNav>
 </div>
+
+<a class="absolute top-0 right-0" href="https://github.com/sveltech/routify">
+<img src="/github.png" class="w-16">
+</a>
