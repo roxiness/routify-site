@@ -22,7 +22,7 @@
   <h4>1. Install module</h4>
   <div class="border border-gray-400 shadow-xl mt-2 p-4">
     <div class="pb-2">Run in project folder</div>
-    <span class="code py-1">npm i -d @sveltech/routify</span>
+    <span class="code py-1">npm i -d @sveltech/routify@next</span>
   </div>
 </div>
 
