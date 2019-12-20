@@ -13,11 +13,12 @@
   <span class="text-gray-600">path, params?</span>
   )
 </h3>
-<b>path:</b>
-string
-<b>params:</b>
-object
-<p>Path can be absolute or relative.</p>
+<b>path: string</b>
+Path can be absolute or relative.
+<br />
+<b>params: object</b>
+Parameters to be passed to the URL. Will defeault to parameters from current
+
 <p>
   Relative paths are based on the filestructure of the current page component
   instead of the current url.
@@ -43,13 +44,23 @@ object
 <br />
 <h3>
   goto (
-  <span class="text-gray-600">path, params?</span>
+  <span class="text-gray-600">path, params?, static?, shallow?</span>
   )
 </h3>
-Syntax sugar for
-<span class="shadow-inner bg-gray-200 rounded px-2">
-  history.pushState({'{}'}, null, url(path, params?))
-</span>
+
+<b>Path: string</b>
+Handled by the url() helper
+<br />
+<b>params: object</b>
+Parameters to be passed to the URL. Will defeault to parameters from current
+URL.
+<br />
+<b>static: boolean</b>
+Render page on the current URL instead of redirecting.
+<br />
+<b>shallow: boolean</b>
+Use the layouts from the current URL.
+<br />
 
 <Prism language="svelte">
   {`<!-- src/pages/redirect.svelte -->
@@ -111,10 +122,10 @@ See if a page is the current route
 
 <br />
 <h3>leftover</h3>
-Get the unconsumed part of the URL. Useful for fallbacks and navigating in widgets.
-  
+Get the unconsumed part of the URL. Useful for fallbacks and navigating in
+widgets.
 <p>
-<i>Example on http://localhost/showawidget/123/update</i>
+  <i>Example on http://localhost/showawidget/123/update</i>
 </p>
 <Prism language="svelte">
   {`<!-- src/pages/showawidget/_fallback.svelte -->
@@ -148,5 +159,3 @@ Get the unconsumed part of the URL. Useful for fallbacks and navigating in widge
 <svelte:component this={component} {data} {id} />
 `}
 </Prism>
-
-
