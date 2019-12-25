@@ -31,6 +31,7 @@
         { path: "/docs/parameters", name: "Parameters", icon: RulerIcon },
         { path: "/docs/props", name: "Props", icon: RulerIcon },
         { path: "/docs/helpers", name: "Helpers", icon: RulerIcon },
+        { path: "/docs/codesplitting", name: "Code-splitting", icon: RulerIcon },
 
       ]
     },
