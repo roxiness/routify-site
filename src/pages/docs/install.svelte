@@ -57,6 +57,8 @@
           <Prism language="javascript">
             {`/** rollup.config.js **/
 ...
+import {routify} from '@sveltech/routify'
+...
   plugins: [
     routify({ /** options **/ }),
     ...
@@ -85,7 +87,7 @@
 </div>
 
 <div class="step">
-  <h4>4. Enable SPA (optional)</h4>
+  <h4>4. Enable SPA</h4>
   <p>
     If you're using history based navigation, make sure that your server
     redirects all requests to "/".
