@@ -8,6 +8,7 @@ import autoPreprocess from 'svelte-preprocess';
 import alias from 'rollup-plugin-alias';
 import svg from 'rollup-plugin-svg'
 import path from 'path'
+import {routify} from '@sveltech/routify'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -17,7 +18,8 @@ export default {
         sourcemap: true,
         format: 'iife',
         name: 'app',
-        file: 'public/bundle.js'
+        file: 'public/bundle/bundle.js'
+        // dir: 'public/bundle'
     },
     plugins: [
         svg(),
@@ -34,11 +36,11 @@ export default {
             // enable run-time checks when not in production
             dev: !production,
             css: css => {
-                css.write('public/components.css');
+                css.write('public/bundle/components.css');
             }
         }),
         postcss({
-            extract: 'public/utils.css'
+            extract: 'public/bundle/utils.css'
         }),
 
         // If you have external dependencies installed from
