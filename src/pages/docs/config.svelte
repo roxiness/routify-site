@@ -68,14 +68,15 @@
 <h3 class="pt-12">To use with CLI</h3>
 
 <Prism language="html">
-  {`Usage: cli [options]
+  {`$ npx routify --help
+Usage: cli [options]
 
 Options:
   -d, --debug                 extra debugging
   -p, --pages <location>      path/to/pages (Defaults to ./src/pages)
   -i, --ignore <list>         ["widget.svelte"] (Files and dirs. Can be string or array. Interpreted as regular expression)
   -u, --unused-prop-warnings  Show warnings about unused props passed by filerouter
-  -d, --dynamic-imports       Experimental code splitting. Defaults to false.)
+  -D, --dynamic-imports       Experimental code splitting. Defaults to false.)
   -s, --single-build          Don\'t watch for new route files
   -h, --help                  output usage information
 `}
