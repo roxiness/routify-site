@@ -5,6 +5,10 @@
   console.log(getContext("routify"));
 </script>
 
+<svelte:head>
+  <title>Auth & Guards - Examples - Routify</title>
+</svelte:head>
+
 <style>
   * :global(.tablinks > .selected) {
     @apply border-blue-500 border-b-2 -mb-1 text-black;

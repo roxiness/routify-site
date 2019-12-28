@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Getting Started - Routify</title>
+</svelte:head>
+
 <h1>Getting Started</h1>
 
 <br>

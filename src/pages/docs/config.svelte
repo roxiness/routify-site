@@ -37,6 +37,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Config - Routify</title>
+</svelte:head>
+
 <h1>Config</h1>
 
 <h3 class="pt-12 pb-4">

@@ -2,6 +2,10 @@
   import Prism from "svelte-prism";
 </script>
 
+<svelte:head>
+  <title>Code-splitting - Routify</title>
+</svelte:head>
+
 <h1>Code-splitting</h1>
 <h3>(Draft)</h3>
 

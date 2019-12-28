@@ -14,6 +14,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Install - Routify</title>
+</svelte:head>
+
 <h1>Install</h1>
 <p>Aternatively to installing Routify, you can also clone the Routify starter template.</p>
 <a class="code " href="https://github.com/sveltech/routify-starter">https://github.com/sveltech/routify-starter</a>  
