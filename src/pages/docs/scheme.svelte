@@ -4,20 +4,24 @@
   }
 </style>
 
+<svelte:head>
+  <title>File scheme - Routify</title>
+</svelte:head>
+
 <h1>File scheme</h1>
 
 <h3>Mapping</h3>
 <p>
-  <span class="code">src/pages/about.svelte</span>
+  <code class="code">src/pages/about.svelte</code>
   corresponds to
-  <span class="code">/about</span>
+  <code class="code">/about</code>
 </p>
 
 <h3>Parameters</h3>
 <p>
-  <span class="code">src/pages/admin/[business].svelte</span>
+  <code class="code">src/pages/admin/[business].svelte</code>
   corresponds to
-  <span class="code">/admin/:business</span>
+  <code class="code">/admin/:business</code>
   , where :business is a parameter.
 </p>
 
@@ -42,7 +46,7 @@
 
 <h3>404 and fallbacks</h3>
 <p>
-  404s can be caught with _fallback.svelte. The first _fallback.svelte that's
+  404s can be caught with <code class="code">_fallback.svelte</code>. The first <code class="code">_fallback.svelte</code> that's
   found while traversing back through parent folders will be used.
 </p>
 <p>

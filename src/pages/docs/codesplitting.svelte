@@ -3,6 +3,10 @@
   import { Tabs, TabsPage, TabsLink } from "@sveltech/bricks";
 </script>
 
+<svelte:head>
+  <title>Code-splitting - Routify</title>
+</svelte:head>
+
 <h1>Code-splitting</h1>
 
 <div class="step">

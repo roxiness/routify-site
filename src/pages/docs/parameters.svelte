@@ -2,6 +2,10 @@
   import Prism from "svelte-prism";
 </script>
 
+<svelte:head>
+  <title>Parameters - Routify</title>
+</svelte:head>
+
 <h1>Parameters</h1>
 <p>Parameters are passed as props to their respective pages/layouts.</p>
 <p>To access all parameters, use the "params" helper</p>
