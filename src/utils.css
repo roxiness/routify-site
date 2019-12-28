@@ -102,5 +102,27 @@ input:hover, textarea:hover {
 }
 
 .code {
-    @apply rounded shadow-inner px-2 bg-gray-200
+    @apply rounded shadow-inner px-2 bg-gray-200 text-gray-900
 }
+
+.note {
+    @apply shadow bg-gray-300  px-4 py-2 text-sm
+}
+
+
+ .step {
+    @apply my-16;
+  } 
+
+  .step .card {
+    @apply border border-gray-400 shadow-xl mt-2 p-4
+  }
+
+
+  .tablinks {
+    @apply border-b-2 border-gray-400 mb-2 text-gray-700
+  }
+
+  .tablinks > .selected {
+    @apply border-blue-500 border-b-2 -mb-1 text-black;
+  }

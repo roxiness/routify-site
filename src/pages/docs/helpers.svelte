@@ -99,22 +99,11 @@ See if a page is the current route
     ['./index', 'Home'],
     ['./about', 'About'],
     ['./contact', 'Contact']
-  ].map(([path, name]) => {
-    return {
-      name,
-      href: $url(path),
-      active: $isActive(path)
-    }
-  })
+  ]
 </script>
 
-<style>
-  .active {font-weight: bold;}
-</sty`}{`le>
-
-
-{#each links as {name, href, active}}
-  <a {href} class:active>{name}</a>
+{#each links as [path, name]}}
+  <a href={$url(path)} class:active={$isActive(path)}>{name}</a>
 {/each}
     
 `}

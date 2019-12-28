@@ -12,10 +12,6 @@
     @apply pb-4 my-4 border-b;
   }
 
-  .step {
-    @apply my-16;
-  }
-
   @screen sm {
     li {
       /* @apply text-lg; */
