@@ -2,6 +2,10 @@
   import Prism from "svelte-prism";
 </script>
 
+<svelte:head>
+  <title>Props - Routify</title>
+</svelte:head>
+
 <h1>Props</h1>
 
 <p>All pages can pass props to nested pages with the "scoped" prop.</p>

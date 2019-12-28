@@ -3,6 +3,10 @@
   import { getContext } from "svelte";
 </script>
 
+<svelte:head>
+  <title>Helpers - Routify</title>
+</svelte:head>
+
 <h1>Helpers</h1>
 
 <p>Routify ships with a few handy helpers.</p>
