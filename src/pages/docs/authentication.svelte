@@ -129,7 +129,7 @@ This prevents small UI glitches and premature authorization checks. -->
         <Prism language="svelte">
           {`<!-- src/pages/admin/_layout.svelte -->
 <scr`}{`ipt>
-  import { goto, routifyContext } from '@sveltech/routify'
+  import { goto } from '@sveltech/routify'
   import { authorize } from 'my-auth-service'  
 </script>
 
@@ -180,11 +180,11 @@ This prevents small UI glitches and premature authorization checks. -->
         <Prism language="svelte">
           {`<!-- src/pages/_layout.svelte -->
 <scr`}{`ipt>
-  import { goto, routifyContext } from '@sveltech/routify'
+  import { goto, isActive } from '@sveltech/routify'
   import { authorize } from 'my-auth-service'
 
   /** show if the current page is "/login" **/
-  let show = $routifyContext.component.path === '/login'
+  let show = $isActive('/login')
   
   /** else only show if user is authorized. Otherwise, redirect to login. **/
   if(!show)
