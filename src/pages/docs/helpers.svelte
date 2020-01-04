@@ -22,11 +22,11 @@ Path can be absolute or relative.
 <br />
 <b>params: object</b>
 Parameters to be passed to the URL. Will defeault to parameters from current
-
-<p>
-  Relative paths are based on the filestructure of the current page component
-  instead of the current url.
+<p>$url resolves paths relative to the page/layout file in which it is used.</p>
+<p>  
+  This ensures consistent URLs which are unaffected by the current browser address (unlike plain relative URLs which resolves from the browser address).
 </p>
+<p />
 
 <Prism language="svelte">
   {`<!-- src/pages/recipes/cakes/cupcakes.svelte -->
