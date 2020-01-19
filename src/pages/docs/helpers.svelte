@@ -21,7 +21,7 @@
 Path can be absolute or relative.
 <br />
 <b>params: object</b>
-Parameters to be passed to the URL. Will defeault to parameters from current
+Parameters to be passed to the URL. Will default to parameters from current
 <p>$url resolves paths relative to the page/layout file in which it is used.</p>
 <p>  
   This ensures consistent URLs which are unaffected by the current browser address (unlike plain relative URLs which resolves from the browser address).
@@ -56,7 +56,7 @@ Parameters to be passed to the URL. Will defeault to parameters from current
 Handled by the url() helper
 <br />
 <b>params: object</b>
-Parameters to be passed to the URL. Will defeault to parameters from current
+Parameters to be passed to the URL. Will default to parameters from current
 URL.
 <br />
 <b>static: boolean</b>
