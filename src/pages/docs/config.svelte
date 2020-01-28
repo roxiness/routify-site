@@ -73,16 +73,22 @@
 
 <Prism language="html">
   {`$ npx routify --help
-Usage: cli [options]
+Usage: cli [options] [command]
 
 Options:
   -d, --debug                 extra debugging
-  -p, --pages <location>      path/to/pages (Defaults to ./src/pages)
-  -i, --ignore <list>         ["widget.svelte"] (Files and dirs. Can be string or array. Interpreted as regular expression)
-  -u, --unused-prop-warnings  Show warnings about unused props passed by filerouter
-  -D, --dynamic-imports       Experimental code splitting. Defaults to false.)
-  -s, --single-build          Don\'t watch for new route files
+  -p, --pages <location>      path/to/pages (default: "./src/pages")
+  -i, --ignore <list>         Files and dirs. Can be string or array. Interpreted as regular expression (default: [])
+  -u, --unused-prop-warnings  Show warnings about unused props passed by filerouter (default: true)
+  -D, --dynamic-imports       Code splitting) (default: false)
+  -b, --single-build          Don't watch for file changes (default: false)
+  -s, --scroll [behavior]     Scroll behavior (default: false)
+  -e, --extensions <names>    Comma separated extensions (default: ["html","svelte"])
   -h, --help                  output usage information
+
+Commands:
+  init
+  export [options]
 `}
 </Prism>
 
