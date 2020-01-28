@@ -10,7 +10,7 @@
 <p>Parameters are passed as props to their respective pages/layouts.</p>
 <p>To access all parameters, use the "params" helper</p>
 <Prism language="svelte">
-  {`  <!-- src/pages/users/[userId/posts/[postId].svelte -->
+  {`  <!-- src/pages/users/[userId]/posts/[postId].svelte -->
   <!-- URL: /users/jimbo/posts/123 -->
 <scr`}{`ipt>
   import { params } from '@sveltech/routify'
