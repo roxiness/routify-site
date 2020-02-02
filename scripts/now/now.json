@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "routify",
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/.*",
+            "status": 200,
+            "dest": "/api/ssr.js"
+        }
+    ]
+}

@@ -2,7 +2,6 @@
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import { getContext } from "svelte";
-  console.log(getContext("routify"));
 </script>
 
 <svelte:head>
