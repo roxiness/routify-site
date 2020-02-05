@@ -23,8 +23,9 @@ Path can be absolute or relative.
 <b>params: object</b>
 Parameters to be passed to the URL. Will default to parameters from current
 <p>$url resolves paths relative to the page/layout file in which it is used.</p>
-<p>  
-  This ensures consistent URLs which are unaffected by the current browser address (unlike plain relative URLs which resolves from the browser address).
+<p>
+  This ensures consistent URLs which are unaffected by the current browser
+  address (unlike plain relative URLs which resolves from the browser address).
 </p>
 <p />
 
@@ -56,8 +57,7 @@ Parameters to be passed to the URL. Will default to parameters from current
 Handled by the url() helper
 <br />
 <b>params: object</b>
-Parameters to be passed to the URL. Will default to parameters from current
-URL.
+Parameters to be passed to the URL. Will default to parameters from current URL.
 <br />
 <b>static: boolean</b>
 Render page on the current URL instead of redirecting.
@@ -146,9 +146,33 @@ widgets.
 
   /** get id and action from $leftover. If there's no action, we'll use 'view' **/
   $: [id, action = 'view'] = $leftover.split('/')
-  $: component = id ? components[action]) : list;
+  $: component = id ? components[action]) : list
 </script>
 
 <svelte:component this={component} {data} {id} />
+`}
+</Prism>
+
+<br />
+<h3>
+  beforeUrlChange (
+  <span class="text-gray-600">calback</span>
+  )
+</h3>
+<p>
+  Intercept navigation requests. (the callback is automatically removed when its parent component is destroyed)
+</p>
+
+
+<Prism language="svelte">
+  {`<!-- src/components/CrudWidget/Index.svelte -->
+<scr`}{`ipt>
+import { beforeUrlChange } from "@sveltech/routify"
+let formIsUnsaved = false
+
+$beforeUrlChange((event, store) => {
+  return !formIsUnsaved
+})
+</script>
 `}
 </Prism>
