@@ -25,7 +25,7 @@
   <h4>1. Install module</h4>
   <div class="card">
     <div class="pb-2">Run in project folder</div>
-    <span class="code py-1">npm i -d @sveltech/routify@next</span>
+    <span class="code py-1">npm i -D @sveltech/routify@next</span>
   </div>
 </div>
 
