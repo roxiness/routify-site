@@ -8,6 +8,7 @@
 
 <h1>Parameters</h1>
 <p>Parameters are passed as props to their respective pages/layouts.</p>
+
 <p>To access all parameters, use the "params" helper</p>
 <Prism language="svelte">
   {`  <!-- src/pages/users/[userId]/posts/[postId].svelte -->
@@ -22,3 +23,10 @@
 </script>
 `}
 </Prism>
+
+<p>
+  In the example above
+  <code class="code">[userId]/_layout.svelte</code>
+  can access userId and
+  <code class="code">[postId].svelte</code> can access postId.
+</p>
