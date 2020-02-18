@@ -18,11 +18,17 @@
   )
 </h3>
 <b>path: string</b>
-Path can be absolute or relative.
+Path can an absolute or relative path or the name of a page.
 <br />
 <b>params: object</b>
 Parameters to be passed to the URL. Will default to parameters from current
-<p>$url resolves paths relative to the page/layout file in which it is used.</p>
+route.
+<br />
+<br />
+<p>
+  <code class="code">$url</code>
+  resolves paths relative to the page/layout file in which it is used.
+</p>
 <p>
   This ensures consistent URLs which are unaffected by the current browser
   address (unlike plain relative URLs which resolves from the browser address).
@@ -41,8 +47,18 @@ Parameters to be passed to the URL. Will default to parameters from current
 <!-- absolute -->
 <a href={$url('/ingredients/sugar')}>Info about sugar</a>
 
+<!-- named -->
+<a href={$url('sugar')}>Info about sugar</a>
+
 <!-- params -->
 <a href={$url('/users/:id', {id: '123'})}>Info author</a>
+`}
+</Prism>
+To name a page insert the following comment
+<code class="code">{`<!-- routify:option name="name-of-my-page" -->`}</code>
+<Prism language="svelte">
+  {`<!-- src/pages/ingredients/sugar.svelte -->
+<!-- routify:option name="sugar" -->  
 `}
 </Prism>
 
@@ -160,9 +176,9 @@ widgets.
   )
 </h3>
 <p>
-  Intercept navigation requests. (the callback is automatically removed when its parent component is destroyed)
+  Intercept navigation requests. (the callback is automatically removed when its
+  parent component is destroyed)
 </p>
-
 
 <Prism language="svelte">
   {`<!-- src/components/CrudWidget/Index.svelte -->
