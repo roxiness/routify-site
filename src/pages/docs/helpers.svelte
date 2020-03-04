@@ -162,7 +162,7 @@ widgets.
 
   /** get id and action from $leftover. If there's no action, we'll use 'view' **/
   $: [id, action = 'view'] = $leftover.split('/')
-  $: component = id ? components[action]) : list
+  $: component = id ? components[action] : list
 </script>
 
 <svelte:component this={component} {data} {id} />
